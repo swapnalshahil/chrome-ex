@@ -18,7 +18,7 @@ $(function () {
             }
             
             chrome.storage.sync.set({'total': newTotal}, function(){
-                if((amount.val() || newTotal.val()) >= current.limit){
+                if((amount && newTotal >= current.limit){
                     var notifOptions = {
                         type: 'basic',
                         iconUrl: 'icon48.png',
